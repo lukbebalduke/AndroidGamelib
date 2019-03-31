@@ -148,4 +148,16 @@ public class SpriteObject extends GameObject {
             return false;
         }
     }
+
+    //Sprite get width
+    public float spriteGetWidth()
+    {
+        return sprite[ getImageIndex()].getWidth();
+    }
+
+    //Sprite get height
+    public float spriteGetHeight()
+    {
+        return sprite[ getImageIndex()].getHeight();
+    }
 }
