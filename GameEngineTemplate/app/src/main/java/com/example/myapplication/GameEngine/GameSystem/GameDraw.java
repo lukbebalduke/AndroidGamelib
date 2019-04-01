@@ -55,6 +55,12 @@ public class GameDraw extends View {
         }
     }
 
+    // Request
+    public void requestInvalidate()
+    {
+        this.postInvalidate();
+    }
+
     //////////// // //////////// //////////// // //////////// //////////// // //////////// //////////// // //////////// //////////// // ////////////
     // Set background color
     public void changeBackground( int col_red, int col_green, int col_blue)

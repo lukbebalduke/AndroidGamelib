@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                         //Render
-                        gameDraw.invalidate();
+                        gameDraw.requestInvalidate();
 
                     //Next
                     try {
