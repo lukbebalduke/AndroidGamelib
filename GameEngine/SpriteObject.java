@@ -56,11 +56,13 @@ public class SpriteObject extends GameObject {
         super.draw(canvas, paint);
 
         //Get info
-        float h = sprite[ getImageIndex()].getHeight() * imageYscale;
-        float w = sprite[ getImageIndex()].getWidth() * imageXscale;
+        if (sprite[ getImageIndex()] != null)
+        {
+            float h = sprite[getImageIndex()].getHeight() * imageYscale;
+            float w = sprite[getImageIndex()].getWidth() * imageXscale;
 
-        //Verts
-        float verts[] = new float[8];
+            //Verts
+            float verts[] = new float[8];
 
             //Top left
             verts[0] = (x - w*0.5f);
@@ -78,8 +80,9 @@ public class SpriteObject extends GameObject {
             verts[6] = (x + w*0.5f);
             verts[7] = (y + h*0.5f);
 
-        //Draw Sprite
-        canvas.drawBitmapMesh( sprite[ getImageIndex()], 1, 1, verts, 0, null, 0, paint);
+            //Draw Sprite
+            canvas.drawBitmapMesh( sprite[ getImageIndex()], 1, 1, verts, 0, null, 0, paint);
+        }
     }
 
     //////////// // //////////// //////////// // //////////// //////////// // //////////// //////////// // //////////// //////////// // ////////////
