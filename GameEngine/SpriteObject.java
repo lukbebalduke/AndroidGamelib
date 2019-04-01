@@ -139,7 +139,7 @@ public class SpriteObject extends GameObject {
         float w = sprite[ getImageIndex()].getWidth() * imageXscale;
 
         // In box
-        if ((clickable == true) && ( mousex >= (x - w*0.5)) && ( mousey >= (y - h*0.5)) && ( mousex <= (x + w*0.5)) && ( mousey <= (y + h*0.5)))
+        if ((clickable == true) && ( mousex >= (x - w*0.5f)) && ( mousey >= (y - h*0.5f)) && ( mousex <= (x + w*0.5f)) && ( mousey <= (y + h*0.5f)))
         {
             return true;
         }

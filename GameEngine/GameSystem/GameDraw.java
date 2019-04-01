@@ -19,9 +19,10 @@ public class GameDraw extends View {
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Field
-    Context context;
-    Paint paint;
-    int r, g, b;
+    private Context context;
+    private Paint paint;
+    private int r, g, b;
+    private Canvas canvas;
 
     // Constructor
     public GameDraw(Context context)
@@ -62,5 +63,11 @@ public class GameDraw extends View {
         g = col_green;
         b = col_blue;
         invalidate();
+    }
+
+    // Get Canvas
+    public Canvas getCanvas()
+    {
+        return canvas;
     }
 }

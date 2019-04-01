@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
 import android.view.MotionEvent;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 
 import com.example.myapplication.GameEngine.GameObject;
@@ -29,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
     {
         // Super and set content
         super.onCreate(savedInstanceState);
+
+            //Fullscreen
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main);
 
         // Create list
@@ -45,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         frameLayout = (FrameLayout)
                 findViewById(R.id.frameLayout);
         gameDraw = new GameDraw(this);
+        gameDraw.changeBackground( 255, 229, 117);
         frameLayout.addView(gameDraw);
 
         // GameStep
