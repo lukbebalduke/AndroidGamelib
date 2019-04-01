@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         frameLayout = (FrameLayout)
                 findViewById(R.id.frameLayout);
         gameDraw = new GameDraw(this);
-        gameDraw.changeBackground( 255, 229, 117);
+        gameDraw.changeBackground( 15, 15, 15);
         frameLayout.addView(gameDraw);
 
         // GameStep
